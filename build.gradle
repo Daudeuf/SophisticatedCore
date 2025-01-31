@@ -27,6 +27,8 @@ repositories {
         }
     }
     maven { url "https://maven.blamejared.com/" }
+
+    maven { url = "https://maven.minecraftforge.net/" }
 }
 
 group = mod_group_id
@@ -70,7 +72,7 @@ sourceSets.main.resources {
 }
 
 dependencies {
-    minecraft "net.neoforged:forge:${minecraft_version}-${neo_version}"
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${neo_version}"
 
     compileOnly fg.deobf("mezz.jei:jei-${jei_mc_version}:${jei_version}")
     runtimeOnly fg.deobf("mezz.jei:jei-${jei_mc_version}:${jei_version}")
