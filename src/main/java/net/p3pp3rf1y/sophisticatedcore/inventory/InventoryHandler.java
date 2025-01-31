@@ -1,6 +1,7 @@
 package net.p3pp3rf1y.sophisticatedcore.inventory;
 
 import com.mojang.datafixers.util.Pair;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
@@ -91,6 +92,7 @@ public abstract class InventoryHandler extends ItemStackHandler implements ITrac
 	public void onContentsChanged(int slot) {
 		super.onContentsChanged(slot);
 		if (persistent && updateSlotNbt(slot)) {
+			System.out.println("MODIFICATION DE L'INVENTAIRE 2");
 			saveInventory();
 			triggerOnChangeListeners(slot);
 		}
